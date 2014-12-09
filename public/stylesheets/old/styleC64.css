@@ -1,0 +1,183 @@
+/* Reset CSS */
+/*
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,  
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,  
+tfoot, thead, tr, th, td {  
+border:0pt none;  
+font-family:inherit;  
+font-size:100%;  
+font-style:inherit;  
+font-weight:inherit;  
+margin:0pt;  
+padding:0pt;  
+vertical-align:baseline;  
+}  */
+
+body {
+	font-family: 'C64 Pro Mono';
+	background-color: #A397FF;
+	margin:50px;
+}
+
+.heading {
+	text-align:center;
+}
+
+.h2 {
+	font-family: 'C64 Pro Mono';
+	font-size:14px;
+	color: #A397FF;
+}
+
+.li {
+	text-decoration:none;
+}
+
+#title {
+	font-family: 'C64 Pro Mono';
+	color: #4F44D8;
+	font-size:50px;
+}
+
+.block {
+	overflow:hidden;
+	position:relative;
+	background-color: #4F44D8;
+	font-family: 'C64 Pro Mono';
+	color: #A397FF;
+	padding-top:5px;
+	margin:20px;
+	margin-top:50px;
+	padding-left:20px;padding-right:20px;padding-bottom:20px;
+}
+p.content {
+	padding-left:20px;padding-bottom:10px;
+	line-height:20px;
+	font-size:16px;
+}
+.lilink {
+	font-family: 'C64 Pro Mono';
+	color: #A397FF;
+	background-color: #4F44D8;
+}
+
+.lilink:hover {
+	font-family: 'C64 Pro Mono';
+	background-color: #A397FF;
+	color: #4F44D8;
+}
+.listLink {
+	font-family: 'C64 Pro Mono';
+	color: #A397FF;
+	background-color: #4F44D8;
+}
+
+a {
+	text-decoration:none;
+}
+
+.listLink:hover {
+	font-family: 'C64 Pro Mono';
+	color: #4F44D8;
+	background-color: #A397FF;
+}
+
+.linkContainer {
+	position:absolute;
+	bottom:0px;
+}
+
+.link {
+	padding-right:30px;
+	font-family: 'C64 Pro Mono';
+	color: #A397FF;
+	background-color: #4F44D8;
+}
+.link:hover {
+	font-family: 'C64 Pro Mono';
+	background-color: #A397FF;
+	color: #4F44D8;
+}
+
+ul.contentList {
+	line-height:25px;
+	font-size:16px;
+	padding-bottom:20px;
+}
+
+textarea {
+background:#4F44D8;
+color:#A397FF;
+font-family: 'C64 Pro Mono';
+font-size:16px;
+border:none;
+}
+
+img.floatRight { 
+    float: right; 
+    padding:0px;
+	margin-right:5px; margin-left:10px;
+	border-width:10px;
+	border-style:solid;
+	border-color:#A397FF;
+}
+
+#backgroundPopup{  
+display:none;  
+position:fixed;  
+_position:absolute; /* hack for internet explorer 6*/  
+height:100%;  
+width:100%;  
+top:0;  
+left:0;  
+background:#000000;  
+border:1px solid #cecece;  
+z-index:1;  
+}  
+#popupContact{  
+display:show;  
+position:fixed;  
+_position:absolute; /* hack for internet explorer 6*/  
+/*
+height:384px;  
+width:408px;  
+*/
+width:10px;
+height:10px;
+background:#4F44D8;  
+/*border:10px solid #A397FF;  */
+z-index:2;  
+padding:12px;  
+font-size:13px;  
+}  
+
+
+#popupContactClose {
+	font-family: 'C64 Pro Mono';
+	color: #A397FF;
+	background-color: #4F44D8;
+	right:6px;  
+	top:4px;  
+	position:absolute;  
+}
+#popupContactClose:hover {
+	font-family: 'C64 Pro Mono';
+	background-color: #A397FF;
+	color: #4F44D8;
+}
+
+#contentarea {
+	position:absolute;
+	top:20px;
+}
+
+/*
+#popupContactClose{  
+font-size:14px;  
+line-height:14px;  
+
+color:#6fa5fd;  
+font-weight:700;  
+display:block;  
+}*/
+

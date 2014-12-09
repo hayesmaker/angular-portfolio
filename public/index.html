@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hayesmaker Portfolio 1.0</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script type="text/javascript" src="javascripts/app/lib/angular.js"></script>
+    <script type="text/javascript" src="javascripts/app/lib/angular-animate.js"></script>
+    <script type="text/javascript" src="javascripts/app/lib/angular-ui-router.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/main.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/controllers/mainController.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/controllers/articlesListController.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/controllers/userInputController.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/controllers/articleController.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/directives/blink.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/directives/userInput.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/services/articles.js"></script>
+    <script type="text/javascript" src="javascripts/app/src/services/userAgentSniffer.js"></script>
+</head>
+<body ng-controller="MainController" class="container">
+<div class="block heading">
+    <h1>{{title}}</h1>
+</div>
+
+<div class="block">
+    <div class="ui-view-container">
+        <div class="well" ui-view></div>
+    </div>
+</div>
+
+</body>
+</html>
