@@ -1,19 +1,15 @@
 angular.module('portfolio')
-  .controller('UserInputController', [
+  .controller('ConsoleController', [
     '$scope',
     '$document',
     '$state',
     function($scope, $document, $state) {
-      //$scope.active = true;
-      //if ($scope.keyboardEventsActive) return;
       console.log('{UserInput} init');
-
-      //todo keydown registered on each init
-      $document.on('keydown', function(event) {
-        //$scope.keyboardEventsActive = true;
+      $scope.userInput = '';
+      $scope.$on('keydown', function(e, args) {
+        console.log('event', args.keyEvent);
+        var event = args.keyEvent;
         if ($state.current.name !== 'console') return;
-        console.log('{keydown} userInput=', $scope.userInput);
-        //Space
         if (event.keyCode === 32) {
           event.preventDefault();
           $scope.userInput += ' ';
@@ -39,7 +35,6 @@ angular.module('portfolio')
             return;
           }
         }
-
         $scope.userInput += String.fromCharCode(event.keyCode);
       });
 
@@ -66,7 +61,7 @@ angular.module('portfolio')
         }
 
         if (input.indexOf('amstrad mode') >= 0) {
-          $document.find('body').addClass('amstrad');
+          $document.find('body').removeClass('ceren').addClass('amstrad');
           $scope.mode = 'AMSTRAD';
           $scope.stopBlink();
           $scope.userInput = "";
@@ -74,7 +69,7 @@ angular.module('portfolio')
         }
 
         if (input.indexOf('c64 mode') >= 0) {
-          $document.find('body').removeClass('amstrad');
+          $document.find('body').removeClass('ceren').removeClass('amstrad');
           $scope.mode = 'C64';
           $scope.userInput = "";
           return;

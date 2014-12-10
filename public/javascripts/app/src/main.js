@@ -10,7 +10,7 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
     .state('console', {
       url: "/console",
       templateUrl: "partials/console.html",
-      controller: 'UserInputController'
+      controller: 'ConsoleController'
     })
     .state('list', {
       url: "^/list",
