@@ -8,7 +8,6 @@ angular.module('portfolio')
       console.log('{MainController} init');
       $scope.title = "HAYESMAKER PORTFOLIO";
       $scope.currentOS = UserAgentSniffer.currentOS;
-
       $document.on('keydown', function(event) {
         $scope.$broadcast('keydown', {
           keyEvent: event

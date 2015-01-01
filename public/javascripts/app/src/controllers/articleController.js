@@ -12,6 +12,7 @@ angular.module('portfolio')
       $scope.date = model.date;
       $scope.company = model.company;
       $scope.desc = model.desc;
+      $scope.subLinks = model.subLinks;
       $scope.imgSrc = model.thumb.src;
       $scope.imgWidth = thumbSize[0];
       $scope.imgHeight = thumbSize[1];

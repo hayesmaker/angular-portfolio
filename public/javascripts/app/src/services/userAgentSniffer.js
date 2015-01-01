@@ -1,6 +1,5 @@
 angular.module('portfolio')
   .factory('UserAgentSniffer', [function() {
-
     var i;
     var isApple = false;
     var isAndroid = false;
@@ -22,19 +21,13 @@ angular.module('portfolio')
     }
 
     var currentOS = function() {
-      if (isApple)
-      return 'CurrentOS: iOS';
-      if (isAndroid)
-      return 'CurrentOS: Android';
-      else return 'CurrentOS: Unknown';
+      return window.navigator.userAgent;
     };
 
-    var sniffer = {
+    return {
       iOS: isApple,
       android: isAndroid,
       currentOS: currentOS()
     };
-
-    return sniffer;
   }
   ]);

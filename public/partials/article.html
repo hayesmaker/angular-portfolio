@@ -6,7 +6,11 @@
     <p class="date">{{date}}</p>
     <p>{{desc}}</p>
 </div>
-<br />
+<ul>
+    <li ng-repeat="pod in subLinks">
+        <a href="{{pod.url}}">{{pod.name}}</a>
+    </li>
+</ul>
 <div>
     <a href="{{linkUrl}}">{{linkDesc}}</a>
 </div>
