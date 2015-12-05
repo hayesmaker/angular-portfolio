@@ -5,11 +5,14 @@ angular.module('portfolio')
     '$state',
     function($scope, $document, $state) {
       console.log('{UserInput} init');
-      $scope.userInput = '';
+      //$scope.userInput = '';
+
+      $scope.lines = [];
+
       $scope.$on('keydown', function(e, args) {
-        console.log('event', args.keyEvent);
-        var event = args.keyEvent;
         if ($state.current.name !== 'console') return;
+        console.log('event', args.keyEvent,  $scope.userInput);
+        var event = args.keyEvent;
         if (event.keyCode === 32) {
           event.preventDefault();
           $scope.userInput += ' ';
@@ -19,12 +22,12 @@ angular.module('portfolio')
         if (event.keyCode === 13) {
           event.preventDefault();
           $scope.command($scope.userInput.toLowerCase());
+          $scope.lines.push({});
         }
         //Escape
         if (event.keyCode === 27) {
           event.preventDefault();
           $scope.userInput = "";
-          //$scope.stopApp();
         }
 
         //BackSpace
@@ -35,7 +38,10 @@ angular.module('portfolio')
             return;
           }
         }
-        $scope.userInput += String.fromCharCode(event.keyCode);
+        if (event.keyCode !== 13) {
+          $scope.userInput += String.fromCharCode(event.keyCode);
+        }
+
       });
 
       $scope.enterTap = function(event) {
@@ -63,8 +69,9 @@ angular.module('portfolio')
         if (input.indexOf('amstrad mode') >= 0) {
           $document.find('body').removeClass('ceren').addClass('amstrad');
           $scope.mode = 'AMSTRAD';
-          $scope.stopBlink();
           $scope.userInput = "";
+          //$scope.$broadcast('amstradMode');
+          //$scope.amstradMode();
           return;
         }
 
@@ -72,6 +79,8 @@ angular.module('portfolio')
           $document.find('body').removeClass('ceren').removeClass('amstrad');
           $scope.mode = 'C64';
           $scope.userInput = "";
+          //$scope.$broadcast('c64Mode');
+          //$scope.c64Mode();
           return;
         }
       };

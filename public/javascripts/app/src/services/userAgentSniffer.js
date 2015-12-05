@@ -5,7 +5,7 @@ angular.module('portfolio')
     var isApple = false;
     var isAndroid = false;
     var iDevice = ['iPad', 'iPhone', 'iPod'];
-    var androidDevice = ['Android'];
+    var androidDevice = ['Android', 'Linux armv7l'];
 
     for (i = 0; i < iDevice.length; i++) {
       if (navigator.platform === iDevice[i]) {
@@ -21,9 +21,18 @@ angular.module('portfolio')
       }
     }
 
+    var currentOS = function() {
+      if (isApple)
+      return 'CurrentOS: iOS';
+      if (isAndroid)
+      return 'CurrentOS: Android';
+      else return 'CurrentOS: Unknown';
+    };
+
     var sniffer = {
       iOS: isApple,
-      android: isAndroid
+      android: isAndroid,
+      currentOS: currentOS()
     };
 
     return sniffer;

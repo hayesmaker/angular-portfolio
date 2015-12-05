@@ -15,15 +15,15 @@ angular.module('portfolio')
           link: 'https://itunes.apple.com/gb/app/heart-vegas-play-free-casino/id785537179?mt=8'
         },
         {
-          title: 'HTML5 Demo: Slot Animation in Pixi.js',
-          date: 'Jan 2014',
+          title: 'Thrust Engine',
+          date: 'Current',
           company: 'Hayesaker Media',
-          desc: 'CANVAS based HTML5 Slot reel animation demo. Demo is served by Node.js server, and is intended to demonstrate Flash quality Slot reel animation in native HTML5. Uses PIXI.js rendering engine.  Uses Require.js based AMD Module',
+          desc: 'Phaserjs, and P2 Physics are being used to create this fully open source space based cave explorer. Half puzzler, half shoot-em-up.  Technical features include End-to-end testing using Phase-2-e and Unit tests using Mocha.',
           thumb: {
-            src:'images/slotsThumb.jpg',
-            size:'209x135'
+            src:'images/title-thrust-engine.png',
+            size:'700x500'
           },
-          link: 'https://party-pokie.herokuapp.com/slots/'
+          link: 'https://thrust-engine.herokuapp.com'
         },
         {
           title: "HTML5 Demo: Conway's Game Of Life in Angular.js",

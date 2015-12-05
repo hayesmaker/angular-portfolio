@@ -2,5 +2,5 @@
     <p>{{about}}</p>
     <p class="title" ng-hide="mobile">{{userInstructions}}</p>
     <p class="title" ng-show="mobile">Tap <span class="clickable" ng-click="runTap(event)">RUN</span>&nbsp;and&nbsp;<span class="clickable" ng-click="enterTap(event)">ENTER</span>&nbsp;to start</p>
-    <span>{{userInput}}</span><blink ng-class="visible? 'visible' : 'hidden'""><span></span></blink>
+    <span>{{userInput}}</span><br ng-repeat="line in lines" /><blink ng-class="visible? 'visible' : 'hidden'""><span></span></blink>
 </user-input>
